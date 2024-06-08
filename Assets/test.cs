@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    Vector3 initPos = new Vector3(1, 2, 3);
+    Vector3 initPos = new Vector3(0, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +12,9 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += new Vector3(0.1f, 0, 0);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            this.transform.position += new Vector3(0.1f, 0, 0);
+        }
     }
 }
